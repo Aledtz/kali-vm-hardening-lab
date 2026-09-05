@@ -1,6 +1,6 @@
 # Phase 0: Preparation & Baseline
 
-**Status:** Pending
+**Status:** Completed
 
 ## Objectives
 
@@ -13,58 +13,34 @@
 
 Hardening without a baseline makes it difficult to measure progress or recover from mistakes. A clean snapshot taken *before* any changes is the single most important safety control in this entire project.
 
-## Steps
+## Environment Details (Recorded)
+
+| Item                  | Value                                      |
+|-----------------------|--------------------------------------------|
+| Distribution          | Kali Linux (rolling)                       |
+| Installation Type     | Official pre-built VM image                |
+| Hypervisor            | VMware Workstation Pro                     |
+| Network Mode          | NAT                                        |
+| Primary User          | `kali` (non-root with sudo)                |
+| Snapshot Name         | `01-after-full-update`                     |
+| Snapshot Description  | Clean pre-built image + full apt upgrade + autoremove + autoclean |
+
+## Steps Completed
 
 ### 1. Confirm Environment Details
-
-Record the following in the main README and here:
-
-- Kali version: `cat /etc/os-release`
-- Kernel: `uname -r`
-- Hypervisor:
-- Network adapter mode (NAT / Bridged / Host-only / Internal):
-- Disk size and whether encryption was used at install time:
-- Desktop environment (if any):
+- [x] Hypervisor, install type, and network mode recorded
+- [x] Snapshot taken after initial system update
 
 ### 2. Take a Clean Snapshot
-
-**Do this now.**
-
-Name suggestion: `00-clean-install` or `phase0-baseline`
-
-Document the snapshot name and date.
+- [x] Snapshot `01-after-full-update` created in VMware Workstation Pro
 
 ### 3. Gather Baseline Information
-
-Run the helper script (once created) or collect manually:
-
+Still recommended (can be done later):
 ```bash
-# Basic identity
-hostnamectl
-whoami
-id
-
-# Network
-ip a
-ip r
-cat /etc/resolv.conf
-
-# Listening services
-ss -tulpn
-
-# Running services
-systemctl list-units --type=service --state=running
-
-# Installed package count (rough)
-dpkg -l | wc -l
+bash scripts/baseline-info.sh > baseline-$(date +%Y%m%d).txt
 ```
 
-Save relevant output (sanitized) for later comparison.
-
-### 4. Decide on Scope Questions
-
-Answer these before proceeding:
-
+### 4. Scope Decisions (to be confirmed)
 - [ ] Will this VM need SSH access from the host or other lab machines?
 - [ ] Will it ever be placed on a network with other systems I care about?
 - [ ] Am I using the default `kali` user or will I create a custom username?
@@ -72,10 +48,11 @@ Answer these before proceeding:
 
 ## Verification
 
-- [ ] Clean snapshot exists and is documented
-- [ ] Environment table in README is filled out
-- [ ] Baseline outputs captured
+- [x] Clean snapshot exists and is documented
+- [x] Environment table in README is filled out
+- [ ] Baseline outputs captured (optional but recommended)
 
 ## Next Phase
 
-Once the baseline is solid, proceed to [Phase 1: Immediate Basics](02-immediate-basics.md).
+Proceed to [Phase 1: Immediate Basics](02-immediate-basics.md).  
+Note: The full system update has already been completed as part of this baseline.
