@@ -40,25 +40,24 @@ The result is a more defensive, less noisy, and more professional Kali environme
 | Item              | Details                                      |
 |-------------------|----------------------------------------------|
 | Distribution      | Kali Linux (rolling)                         |
-| Installation Type | Fresh VM (pre-built image or ISO install)    |
-| Hypervisor        | TBD (VirtualBox / VMware / Proxmox / etc.)   |
-| Network Mode      | Isolated / Host-only + controlled access     |
-| Primary User      | Non-root (`kali` or custom) with sudo        |
-
-> Update this table as the lab progresses.
+| Installation Type | Official pre-built VM image                  |
+| Hypervisor        | VMware Workstation Pro                       |
+| Network Mode      | NAT                                          |
+| Primary User      | Non-root (`kali`) with sudo                  |
+| Snapshot          | `01-after-full-update` (full upgrade + autoremove + autoclean completed) |
 
 ---
 
 ## Hardening Phases
 
-| Phase | Title                              | Status     | Documentation |
-|-------|------------------------------------|------------|---------------|
-| 0     | Preparation & Baseline             | Pending    | [docs/01-preparation-and-baseline.md](docs/01-preparation-and-baseline.md) |
-| 1     | Immediate Basics                   | Pending    | [docs/02-immediate-basics.md](docs/02-immediate-basics.md) |
-| 2     | Network Hardening                  | Pending    | [docs/03-network-hardening.md](docs/03-network-hardening.md) |
-| 3     | Access Control                     | Pending    | [docs/04-access-control.md](docs/04-access-control.md) |
-| 4     | System & Kernel Hardening          | Pending    | [docs/05-system-and-kernel-hardening.md](docs/05-system-and-kernel-hardening.md) |
-| 5     | Monitoring & Maintenance           | Pending    | [docs/06-monitoring-and-maintenance.md](docs/06-monitoring-and-maintenance.md) |
+| Phase | Title                              | Status          | Documentation |
+|-------|------------------------------------|-----------------|---------------|
+| 0     | Preparation & Baseline             | Completed       | [docs/01-preparation-and-baseline.md](docs/01-preparation-and-baseline.md) |
+| 1     | Immediate Basics                   | In Progress     | [docs/02-immediate-basics.md](docs/02-immediate-basics.md) |
+| 2     | Network Hardening                  | Pending         | [docs/03-network-hardening.md](docs/03-network-hardening.md) |
+| 3     | Access Control                     | Pending         | [docs/04-access-control.md](docs/04-access-control.md) |
+| 4     | System & Kernel Hardening          | Pending         | [docs/05-system-and-kernel-hardening.md](docs/05-system-and-kernel-hardening.md) |
+| 5     | Monitoring & Maintenance           | Pending         | [docs/06-monitoring-and-maintenance.md](docs/06-monitoring-and-maintenance.md) |
 
 Detailed philosophy and approach: [docs/00-overview-and-philosophy.md](docs/00-overview-and-philosophy.md)
 
