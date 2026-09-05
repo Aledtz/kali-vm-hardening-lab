@@ -1,0 +1,29 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local / sensitive
+*.local
+.env
+secrets/
+private/
+
+# Screenshots that may contain sensitive info (optional - remove if you want to track them)
+# screenshots/
+
+# Temporary files
+*.tmp
+*.bak
+*~
