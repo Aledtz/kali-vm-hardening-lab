@@ -3,13 +3,13 @@
 Use this checklist to track progress. Check items off as they are completed and verified.
 
 ## Phase 0 – Preparation & Baseline
-- [ ] Environment details recorded in README
-- [ ] Clean snapshot taken (`00-clean-install` or equivalent)
-- [ ] Baseline system information collected
+- [x] Environment details recorded in README
+- [x] Clean snapshot taken (`01-after-full-update`)
+- [ ] Baseline system information collected (optional – can use `scripts/baseline-info.sh`)
 - [ ] Scope decisions made (SSH needed? Network exposure? Username?)
 
 ## Phase 1 – Immediate Basics
-- [ ] Full system update completed (`apt full-upgrade`)
+- [x] Full system update completed (`apt full-upgrade` + autoremove + autoclean)
 - [ ] Default password changed
 - [ ] Hostname changed to non-obvious value
 - [ ] `/etc/hosts` updated
@@ -52,5 +52,5 @@ Use this checklist to track progress. Check items off as they are completed and 
 ## Final
 - [ ] Main README status table updated
 - [ ] Screenshots added (where useful)
-- [ ] Repository pushed to GitHub
+- [x] Repository pushed to GitHub
 - [ ] Final review of documentation for clarity and completeness
