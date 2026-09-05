@@ -1,6 +1,6 @@
 # Phase 1: Immediate Basics
 
-**Status:** Pending
+**Status:** In Progress
 
 ## Objectives
 
@@ -18,31 +18,44 @@ These changes address issues that are actively and automatically exploited or fi
 
 Completing this phase alone dramatically improves the security posture.
 
-## Steps (Outline – to be expanded during execution)
+## Steps
 
 ### 1. Full System Update
-- `sudo apt update && sudo apt full-upgrade -y`
-- Clean up: `sudo apt autoremove -y && sudo apt autoclean`
+**Status: Completed** (done before the `01-after-full-update` snapshot)
+
+Commands that were run:
+```bash
+sudo apt update && sudo apt full-upgrade -y
+sudo apt autoremove -y
+sudo apt autoclean
+```
 
 ### 2. Change Default Password
-- Change password for the current user
+**Status: Pending**
+
+- Change password for the current user (`passwd`)
 - Optionally set a strong password for root (or keep it locked)
 
 ### 3. Change Hostname
+**Status: Pending**
+
 - Choose a non-obvious hostname
 - Update `/etc/hosts`
 - Prevent hostname leakage via DHCP
 
 ### 4. Regenerate SSH Host Keys (if SSH is installed)
+**Status: Pending**
+
 - Move old keys aside
 - Reconfigure openssh-server
 
 ### 5. Take a New Snapshot
-Name suggestion: `01-immediate-basics-complete`
+After the remaining steps are complete, take a new snapshot:  
+Suggested name: `02-immediate-basics-complete`
 
 ## Verification Checklist
 
-- [ ] System fully updated
+- [x] System fully updated
 - [ ] Password changed and tested
 - [ ] Hostname updated and verified (`hostnamectl`)
 - [ ] SSH host keys regenerated (if applicable)
@@ -50,7 +63,8 @@ Name suggestion: `01-immediate-basics-complete`
 
 ## Notes & Decisions
 
-*(Record any deviations or choices made during this phase)*
+- System update was performed on the fresh pre-built image before the first hardening snapshot.
+- Snapshot `01-after-full-update` serves as the rollback point for the rest of Phase 1.
 
 ---
 
