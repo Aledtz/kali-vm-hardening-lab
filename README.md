@@ -43,8 +43,10 @@ The result is a more defensive, less noisy, and more professional Kali environme
 | Installation Type | Official pre-built VM image                  |
 | Hypervisor        | VMware Workstation Pro                       |
 | Network Mode      | NAT                                          |
-| Primary User      | Non-root (`kali`) with sudo                  |
-| Snapshot          | `01-after-full-update` (full upgrade + autoremove + autoclean completed) |
+| Hostname          | `hankslab`                                   |
+| Primary User      | `hankhacks` (sudo)                           |
+| SSH Server        | Removed                                      |
+| Latest Snapshot   | `02-immediate-basics-complete`               |
 
 ---
 
@@ -53,7 +55,7 @@ The result is a more defensive, less noisy, and more professional Kali environme
 | Phase | Title                              | Status          | Documentation |
 |-------|------------------------------------|-----------------|---------------|
 | 0     | Preparation & Baseline             | Completed       | [docs/01-preparation-and-baseline.md](docs/01-preparation-and-baseline.md) |
-| 1     | Immediate Basics                   | In Progress     | [docs/02-immediate-basics.md](docs/02-immediate-basics.md) |
+| 1     | Immediate Basics                   | Completed       | [docs/02-immediate-basics.md](docs/02-immediate-basics.md) |
 | 2     | Network Hardening                  | Pending         | [docs/03-network-hardening.md](docs/03-network-hardening.md) |
 | 3     | Access Control                     | Pending         | [docs/04-access-control.md](docs/04-access-control.md) |
 | 4     | System & Kernel Hardening          | Pending         | [docs/05-system-and-kernel-hardening.md](docs/05-system-and-kernel-hardening.md) |
