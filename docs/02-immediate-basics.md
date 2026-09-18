@@ -1,6 +1,6 @@
 # Phase 1: Immediate Basics
 
-**Status:** In Progress
+**Status:** Completed
 
 ## Objectives
 
@@ -18,53 +18,56 @@ These changes address issues that are actively and automatically exploited or fi
 
 Completing this phase alone dramatically improves the security posture.
 
-## Steps
+## Steps Completed
 
 ### 1. Full System Update
-**Status: Completed** (done before the `01-after-full-update` snapshot)
+**Status: Completed**
 
-Commands that were run:
 ```bash
 sudo apt update && sudo apt full-upgrade -y
 sudo apt autoremove -y
 sudo apt autoclean
 ```
 
-### 2. Change Default Password
-**Status: Pending**
+### 2. Change Default Password + Create New User
+**Status: Completed**
 
-- Change password for the current user (`passwd`)
-- Optionally set a strong password for root (or keep it locked)
+- Created new user: `hankhacks`
+- Added to sudo and common groups
+- Successfully logged in as `hankhacks`
+- Old `kali` user kept for now (to be removed later)
 
 ### 3. Change Hostname
-**Status: Pending**
+**Status: Completed**
 
-- Choose a non-obvious hostname
-- Update `/etc/hosts`
-- Prevent hostname leakage via DHCP
+- Hostname set to: `hankslab`
+- `/etc/hosts` updated
+- Hostname leakage via DHCP disabled
 
-### 4. Regenerate SSH Host Keys (if SSH is installed)
-**Status: Pending**
+### 4. SSH Server
+**Status: Completed**
 
-- Move old keys aside
-- Reconfigure openssh-server
+- SSH server stopped, disabled, and completely removed (`openssh-server` purged)
+- No longer listening on port 22
 
-### 5. Take a New Snapshot
-After the remaining steps are complete, take a new snapshot:  
-Suggested name: `02-immediate-basics-complete`
+### 5. Snapshot
+**Status: Completed**
+
+- Snapshot name: `02-immediate-basics-complete`
 
 ## Verification Checklist
 
 - [x] System fully updated
-- [ ] Password changed and tested
-- [ ] Hostname updated and verified (`hostnamectl`)
-- [ ] SSH host keys regenerated (if applicable)
-- [ ] New snapshot taken
+- [x] New user `hankhacks` created and working with sudo
+- [x] Hostname changed to `hankslab` and verified
+- [x] SSH server removed
+- [x] Snapshot `02-immediate-basics-complete` taken
 
 ## Notes & Decisions
 
-- System update was performed on the fresh pre-built image before the first hardening snapshot.
-- Snapshot `01-after-full-update` serves as the rollback point for the rest of Phase 1.
+- Chose not to use SSH → removed the service entirely for reduced attack surface.
+- Kept the original `kali` user temporarily; will remove it in a later cleanup step.
+- Network mode remains NAT (suitable for TryHackMe / Hack The Box).
 
 ---
 
