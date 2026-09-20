@@ -1,6 +1,6 @@
 # Phase 2: Network Hardening
 
-**Status:** Pending
+**Status:** Completed
 
 ## Objectives
 
@@ -12,27 +12,56 @@
 
 Even a well-patched system can be identified and targeted by its network behavior. Predictable MAC addresses, hostname announcements, and open ports make a Kali VM stand out immediately on a network.
 
-## Planned Steps (to be detailed during execution)
+## Steps Completed
 
-1. Enable MAC address randomization via NetworkManager
-2. Install and configure UFW
-   - Default deny incoming
-   - Default allow outgoing
-   - Explicitly allow only required services
-3. Disable sending hostname via DHCP
-4. Optional: Disable IPv6 if not required
-5. Review and document listening ports before/after
+### 1. MAC Address Randomization
+Enabled via NetworkManager:
 
-## Snapshot Recommendation
+```bash
+sudo tee /etc/NetworkManager/conf.d/mac-randomize.conf > /dev/null <<EOF
+[device]
+wifi.scan-rand-mac-address=yes
 
-Take a snapshot after successful UFW configuration and testing: `02-network-hardening-complete`
+[connection]
+wifi.cloned-mac-address=random
+ethernet.cloned-mac-address=random
+EOF
+
+sudo systemctl restart NetworkManager
+```
+
+MAC randomization takes effect on the next network reconnect or reboot.
+
+### 2. UFW Firewall
+Installed and configured with strict defaults:
+
+```bash
+sudo apt install ufw -y
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw enable
+```
+
+**Result:** Status active – deny incoming, allow outgoing.
+
+### 3. Hostname Leakage
+Already handled in Phase 1 (hostname set to `hankslab` and DHCP hostname sending disabled).
+
+### 4. Listening Ports
+Reviewed with `ss -tulpn`. No unexpected services listening after SSH removal.
+
+## Snapshot
+
+- **Name:** `03-network-hardening-complete`
+- **Description:** MAC randomization enabled + UFW active (deny incoming / allow outgoing)
 
 ## Verification
 
-- [ ] MAC randomization active
-- [ ] UFW enabled and rules verified (`sudo ufw status verbose`)
-- [ ] Hostname no longer sent via DHCP
-- [ ] Only expected ports are listening
+- [x] MAC randomization configured
+- [x] UFW installed, enabled, and policies verified
+- [x] Hostname leakage prevented
+- [x] Listening ports reviewed
+- [x] Snapshot taken
 
 ---
 
