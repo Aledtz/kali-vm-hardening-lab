@@ -18,13 +18,13 @@ Use this checklist to track progress. Check items off as they are completed and 
 - [x] Snapshot taken after Phase 1 (`02-immediate-basics-complete`)
 
 ## Phase 2 – Network Hardening
-- [ ] MAC address randomization enabled
-- [ ] UFW installed
-- [ ] UFW default policies set (deny incoming / allow outgoing)
-- [ ] Required ports/services explicitly allowed
-- [ ] UFW enabled and status verified
-- [ ] Listening ports reviewed
-- [ ] Snapshot taken after Phase 2
+- [x] MAC address randomization enabled
+- [x] UFW installed
+- [x] UFW default policies set (deny incoming / allow outgoing)
+- [x] Required ports/services explicitly allowed (none needed)
+- [x] UFW enabled and status verified
+- [x] Listening ports reviewed
+- [x] Snapshot taken after Phase 2 (`03-network-hardening-complete`)
 
 ## Phase 3 – Access Control
 - [x] Decision made on SSH → Removed entirely
