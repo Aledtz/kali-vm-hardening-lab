@@ -1,6 +1,6 @@
 # Phase 3: Access Control
 
-**Status:** Pending
+**Status:** Completed
 
 ## Objectives
 
@@ -13,28 +13,38 @@
 
 SSH is the most common remote entry point. Default or weak authentication on SSH (or on tools that expose web interfaces/databases) is a frequent cause of compromise.
 
-## Planned Steps
+## Steps Completed
 
-1. Decide whether SSH is required
-   - If **not required**: disable and/or remove `openssh-server`
-   - If **required**: harden aggressively
-2. SSH hardening (when needed):
-   - Key-based authentication only
-   - Disable password authentication
-   - Disable root login
-   - Reduce MaxAuthTries
-   - Optional: non-standard port + Fail2Ban
-3. Change default credentials for common tools:
-   - Metasploit (postgres)
-   - BeEF
-   - BloodHound
-   - Empire / Starkiller
-   - Others as discovered
-4. Review sudo configuration and user accounts
+### 1. SSH Server
+**Status: Completed (earlier)**
+- Decision: Not required for this lab
+- Action: `openssh-server` stopped, disabled, and purged
 
-## Snapshot Recommendation
+### 2. Metasploit Database
+**Status: Completed**
+- PostgreSQL is running and listening on localhost only
+- Metasploit configuration file present
+- Successfully connected: `[*] Connected to msf. Connection type: postgresql.`
 
-`03-access-control-complete`
+### 3. Other Tools
+- Empire and OpenVAS/GVM are present but left with defaults for now
+- Will be secured later only if/when actually used
+
+### 4. User Accounts
+- Primary user: `hankhacks` (sudo)
+- Old `kali` user still present (removal planned for a later cleanup step)
+
+## Snapshot
+
+- **Name:** `04-access-control-complete`
+- **Description:** SSH removed, Metasploit database initialized and verified, optional tools deferred
+
+## Verification
+
+- [x] SSH server removed
+- [x] Metasploit database connected successfully
+- [x] Scope decision documented (optional tools deferred)
+- [x] Snapshot taken
 
 ---
 
