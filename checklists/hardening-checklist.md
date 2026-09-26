@@ -28,8 +28,9 @@ Use this checklist to track progress. Check items off as they are completed and 
 
 ## Phase 3 – Access Control
 - [x] Decision made on SSH → Removed entirely
-- [ ] Default credentials changed for Metasploit, BeEF, BloodHound, etc.
-- [ ] Snapshot taken after Phase 3
+- [x] Metasploit database initialized and verified
+- [x] Optional tools (Empire, OpenVAS) deferred until needed
+- [x] Snapshot taken after Phase 3 (`04-access-control-complete`)
 
 ## Phase 4 – System & Kernel Hardening
 - [ ] Unnecessary services disabled/removed
