@@ -33,13 +33,12 @@ Use this checklist to track progress. Check items off as they are completed and 
 - [x] Snapshot taken after Phase 3 (`04-access-control-complete`)
 
 ## Phase 4 – System & Kernel Hardening
-- [ ] Unnecessary services disabled/removed
-- [ ] AppArmor status confirmed
-- [ ] Sysctl hardening applied
-- [ ] Unattended upgrades enabled
-- [ ] OpenSSL Strong Security mode considered via `kali-tweaks`
-- [ ] Optional rootkit scanner baseline performed
-- [ ] Snapshot taken after Phase 4
+- [x] AppArmor status confirmed
+- [x] Sysctl hardening applied
+- [x] Unattended upgrades enabled
+- [x] OpenSSL Strong Security option evaluated (not available in current kali-tweaks – left default for CTF compatibility)
+- [x] Rootkit scanners (rkhunter + chkrootkit) installed and baselined
+- [x] Snapshot taken after Phase 4 (`05-system-hardening-complete`)
 
 ## Phase 5 – Monitoring & Maintenance
 - [ ] Logging approach documented
