@@ -48,7 +48,9 @@ The result is a more defensive, less noisy, and more professional Kali environme
 | SSH Server        | Removed                                      |
 | Firewall          | UFW active (deny incoming / allow outgoing)  |
 | Metasploit DB     | Initialized and connected                    |
-| Latest Snapshot   | `04-access-control-complete`                 |
+| AppArmor          | Active (20+ profiles in enforce mode)        |
+| Unattended Upgrades | Enabled                                    |
+| Latest Snapshot   | `05-system-hardening-complete`               |
 
 ---
 
@@ -60,7 +62,7 @@ The result is a more defensive, less noisy, and more professional Kali environme
 | 1     | Immediate Basics                   | Completed       | [docs/02-immediate-basics.md](docs/02-immediate-basics.md) |
 | 2     | Network Hardening                  | Completed       | [docs/03-network-hardening.md](docs/03-network-hardening.md) |
 | 3     | Access Control                     | Completed       | [docs/04-access-control.md](docs/04-access-control.md) |
-| 4     | System & Kernel Hardening          | Pending         | [docs/05-system-and-kernel-hardening.md](docs/05-system-and-kernel-hardening.md) |
+| 4     | System & Kernel Hardening          | Completed       | [docs/05-system-and-kernel-hardening.md](docs/05-system-and-kernel-hardening.md) |
 | 5     | Monitoring & Maintenance           | Pending         | [docs/06-monitoring-and-maintenance.md](docs/06-monitoring-and-maintenance.md) |
 
 Detailed philosophy and approach: [docs/00-overview-and-philosophy.md](docs/00-overview-and-philosophy.md)
