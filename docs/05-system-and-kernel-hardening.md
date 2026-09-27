@@ -1,6 +1,6 @@
 # Phase 4: System & Kernel Hardening
 
-**Status:** Pending
+**Status:** Completed
 
 ## Objectives
 
@@ -9,18 +9,46 @@
 - Enable security frameworks (AppArmor)
 - Automate security updates
 
-## Planned Steps
+## Steps Completed
 
-1. Review and disable unnecessary services
-2. Confirm AppArmor status and enforce profiles where possible
-3. Apply recommended sysctl hardening settings
-4. Enable unattended upgrades for security patches
-5. Use `kali-tweaks` to set OpenSSL to Strong Security mode (if legacy protocol support is not required)
-6. Optional: Install and baseline rootkit scanners (rkhunter / chkrootkit)
+### 1. AppArmor
+- Module loaded
+- 20 profiles in enforce mode
+- Many profiles in complain/unconfined mode (normal for a Kali desktop environment)
+- No aggressive changes made (to avoid breaking tools)
 
-## Snapshot Recommendation
+### 2. Unattended Upgrades
+- Package installed and enabled
+- Automatic security updates configured
 
-`04-system-hardening-complete`
+### 3. Sysctl Hardening
+- Created `/etc/sysctl.d/99-hardening.conf` with common network and kernel hardening settings
+- Settings applied successfully via `sysctl --system`
+
+### 4. OpenSSL Configuration
+- Attempted via `kali-tweaks` → Hardening menu
+- “Strong Security / Wide Compatibility” option no longer present in current Kali version
+- Left at default (wider compatibility) — preferred for CTF work so tools can still talk to older/vulnerable services
+
+### 5. Rootkit Scanners
+- Installed `rkhunter` and `chkrootkit`
+- `rkhunter --update` failed (common issue — mirrors outdated)
+- Local property database created with `--propupd`
+- Both scanners run successfully (warnings expected on Kali)
+
+## Snapshot
+
+- **Name:** `05-system-hardening-complete`
+- **Description:** AppArmor verified, unattended-upgrades enabled, sysctl hardening applied, rootkit scanners installed and baselined
+
+## Verification
+
+- [x] AppArmor status checked
+- [x] Unattended upgrades enabled
+- [x] Sysctl hardening applied
+- [x] OpenSSL option evaluated (not available / left default)
+- [x] Rootkit scanners installed and run
+- [x] Snapshot taken
 
 ---
 
