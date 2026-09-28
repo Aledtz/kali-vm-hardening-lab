@@ -3,7 +3,7 @@
 **A practical, documented home-lab project focused on hardening a fresh Kali Linux virtual machine for safe, responsible use.**
 
 ![Kali Linux](https://img.shields.io/badge/Kali-Linux-blue?logo=kalilinux&logoColor=white)
-![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 > **Author:** [Aledtz](https://github.com/Aledtz)  
@@ -63,7 +63,7 @@ The result is a more defensive, less noisy, and more professional Kali environme
 | 2     | Network Hardening                  | Completed       | [docs/03-network-hardening.md](docs/03-network-hardening.md) |
 | 3     | Access Control                     | Completed       | [docs/04-access-control.md](docs/04-access-control.md) |
 | 4     | System & Kernel Hardening          | Completed       | [docs/05-system-and-kernel-hardening.md](docs/05-system-and-kernel-hardening.md) |
-| 5     | Monitoring & Maintenance           | Pending         | [docs/06-monitoring-and-maintenance.md](docs/06-monitoring-and-maintenance.md) |
+| 5     | Monitoring & Maintenance           | Completed       | [docs/06-monitoring-and-maintenance.md](docs/06-monitoring-and-maintenance.md) |
 
 Detailed philosophy and approach: [docs/00-overview-and-philosophy.md](docs/00-overview-and-philosophy.md)
 
@@ -108,9 +108,9 @@ Use responsibly.
 
 ## Progress & Contributions
 
-This is an active personal lab project. Documentation will be updated as each phase is completed and verified.
+This project is complete as a baseline hardening lab. Future improvements (removing the old `kali` user, adding screenshots, further tool-specific hardening) can be added over time.
 
-Feel free to open issues or suggestions. Pull requests that improve clarity, add verification steps, or fix errors are welcome.
+Feel free to open issues or suggestions.
 
 ---
 
