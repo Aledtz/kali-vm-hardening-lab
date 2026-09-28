@@ -11,6 +11,30 @@
 
 ---
 
+## Project Summary
+
+This repository documents the complete process of hardening a fresh Kali Linux virtual machine for safe use as a personal cybersecurity home lab.
+
+Starting from the official pre-built Kali VM image, the project applies a structured, phased hardening approach covering:
+
+- System updates and baseline configuration
+- User and hostname hardening
+- Removal of unnecessary services (including SSH)
+- Host-based firewall (UFW)
+- MAC address randomization
+- Metasploit database setup
+- AppArmor verification
+- Kernel/sysctl hardening
+- Automatic security updates
+- Rootkit scanner baselines
+- Ongoing maintenance and residual risk documentation
+
+Every phase includes clear explanations of *what* was changed, *why* it matters, exact commands, verification steps, and trade-offs. Named VM snapshots were taken after each major phase to maintain easy rollback points.
+
+The result is a more defensive, less noisy Kali environment suitable for TryHackMe, Hack The Box, and other authorized training while demonstrating practical Linux security and documentation skills.
+
+---
+
 ## Project Overview
 
 Kali Linux is an excellent penetration testing distribution, but out of the box (especially pre-built VM images) it prioritizes convenience and tool availability over security posture. Leaving defaults in place is a common and dangerous mistake.
