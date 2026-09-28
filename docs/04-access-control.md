@@ -26,6 +26,12 @@ SSH is the most common remote entry point. Default or weak authentication on SSH
 - Metasploit configuration file present
 - Successfully connected: `[*] Connected to msf. Connection type: postgresql.`
 
+![Metasploit database status](../screenshots/10-msfdb-status.png)
+
+![Metasploit database init](../screenshots/11-msfdb-init.png)
+
+![Metasploit connected](../screenshots/12-msf-connect.png)
+
 ### 3. Other Tools
 - Empire and OpenVAS/GVM are present but left with defaults for now
 - Will be secured later only if/when actually used
