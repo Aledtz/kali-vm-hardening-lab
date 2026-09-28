@@ -32,6 +32,8 @@ sudo systemctl restart NetworkManager
 
 MAC randomization takes effect on the next network reconnect or reboot.
 
+![MAC address randomization](../screenshots/08-mac-address-randomization.png)
+
 ### 2. UFW Firewall
 Installed and configured with strict defaults:
 
@@ -43,6 +45,8 @@ sudo ufw enable
 ```
 
 **Result:** Status active – deny incoming, allow outgoing.
+
+![Enable UFW](../screenshots/09-enable-ufw.png)
 
 ### 3. Hostname Leakage
 Already handled in Phase 1 (hostname set to `hankslab` and DHCP hostname sending disabled).
