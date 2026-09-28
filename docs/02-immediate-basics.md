@@ -37,6 +37,12 @@ sudo apt autoclean
 - Successfully logged in as `hankhacks`
 - Old `kali` user kept for now (to be removed later)
 
+![Change password and user](../screenshots/01-change-passwd-and-user.png)
+
+![Add new user with sudo](../screenshots/02-add-new-user-sudo.png)
+
+![Logged in as hankhacks](../screenshots/07-hankhacks-login.png)
+
 ### 3. Change Hostname
 **Status: Completed**
 
@@ -44,11 +50,19 @@ sudo apt autoclean
 - `/etc/hosts` updated
 - Hostname leakage via DHCP disabled
 
+![Change hostname](../screenshots/03-change-hostname.png)
+
+![Hostname configuration](../screenshots/04-change-host-2.png)
+
 ### 4. SSH Server
 **Status: Completed**
 
 - SSH server stopped, disabled, and completely removed (`openssh-server` purged)
 - No longer listening on port 22
+
+![Stop SSH service](../screenshots/05-stop-ssh.png)
+
+![Remove SSH server](../screenshots/06-remove-ssh.png)
 
 ### 5. Snapshot
 **Status: Completed**
