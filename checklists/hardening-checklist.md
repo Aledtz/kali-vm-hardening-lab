@@ -41,15 +41,15 @@ Use this checklist to track progress. Check items off as they are completed and 
 - [x] Snapshot taken after Phase 4 (`05-system-hardening-complete`)
 
 ## Phase 5 – Monitoring & Maintenance
-- [ ] Logging approach documented
-- [ ] Update cadence defined
-- [ ] Ongoing snapshot strategy defined
-- [ ] Residual risks documented
-- [ ] Lessons learned updated
+- [x] Logging approach documented
+- [x] Update cadence defined
+- [x] Ongoing snapshot strategy defined
+- [x] Residual risks documented
+- [x] Lessons learned updated
 
 ## Final
 - [x] Main README status table updated
 - [ ] Screenshots added (where useful)
 - [x] Repository pushed to GitHub
-- [ ] Final review of documentation for clarity and completeness
+- [x] Final review of documentation for clarity and completeness
 - [ ] Old `kali` user removed (planned for later)
