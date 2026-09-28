@@ -21,9 +21,15 @@
 - Package installed and enabled
 - Automatic security updates configured
 
+![Unattended upgrades](../screenshots/13-auto-updates.png)
+
+![Unattended upgrades confirmation](../screenshots/14-auto-updates-confirmation.png)
+
 ### 3. Sysctl Hardening
 - Created `/etc/sysctl.d/99-hardening.conf` with common network and kernel hardening settings
 - Settings applied successfully via `sysctl --system`
+
+![Sysctl hardening](../screenshots/15-sysctl-hardening.png)
 
 ### 4. OpenSSL Configuration
 - Attempted via `kali-tweaks` → Hardening menu
